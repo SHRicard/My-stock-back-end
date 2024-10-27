@@ -1,0 +1,225 @@
+{
+  "products": [
+    {
+      "create": "2024-10-17T03:00:00.000Z",
+      "name": "mesa",
+      "quantity": 12,
+      "description": "*por favor ingrese las dimensiones",
+      "type": "cubierta",
+      "dimension": "200/52 r12",
+      "price": "$ 1.500.000",
+      "id": "6711aeaf4c47c30084a6f772"
+    }
+  ],
+  "workRecords": [
+    {
+      "id": "671013bc31759b812ea5deab",
+      "userId": "670c624259229521ea20ddaa",
+      "profile": {
+        "id": "670c624259229521ea20ddaa",
+        "name": "personal",
+        "surName": "personal",
+        "documents": "36.165.173"
+      },
+      "workDate": "2024-10-16T03:00:00.000Z",
+      "startTime": "2024-10-16T19:27:56.248Z",
+      "endTime": "2024-10-16T19:28:32.527Z",
+      "totalHours": "0 hrs 0 min",
+      "description": null,
+      "status": "finalizado"
+    },
+    {
+      "id": "67101cca6a23489c2f136b8a",
+      "userId": "670c624259229521ea20ddaa",
+      "profile": {
+        "id": "670c624259229521ea20ddaa",
+        "name": "personal",
+        "surName": "personal",
+        "documents": "36.165.173"
+      },
+      "workDate": "2024-10-16T03:00:00.000Z",
+      "startTime": "2024-10-16T20:06:34.124Z",
+      "endTime": "2024-10-16T20:13:43.245Z",
+      "totalHours": "0 hrs 7 min",
+      "description": [
+        {
+          "date": "2024-10-16T20:13:40.597Z",
+          "details": "Recuerda que puedes enviar todos los detalles que necesites siempre y cuando el trabajador esté en su horario de trabajo. Cada detalle que envíes se adjuntará automáticamente al documento diario generado para ese trabajador. Esto permite llevar un seguimiento completo de las actividades y cualquier observación o comentario importante quedará registrado junto a la jornada laboral."
+        }
+      ],
+      "status": "finalizado"
+    },
+    {
+      "id": "67101e7e6a23489c2f136b8e",
+      "userId": "670c624259229521ea20ddaa",
+      "profile": {
+        "id": "670c624259229521ea20ddaa",
+        "name": "personal",
+        "surName": "personal",
+        "documents": "36.165.173"
+      },
+      "workDate": "2024-10-16T03:00:00.000Z",
+      "startTime": "2024-10-16T20:13:50.389Z",
+      "endTime": "2024-10-16T20:13:52.915Z",
+      "totalHours": "0 hrs 0 min",
+      "description": null,
+      "status": "finalizado"
+    },
+    {
+      "id": "67101e846a23489c2f136b91",
+      "userId": "670c624259229521ea20ddaa",
+      "profile": {
+        "id": "670c624259229521ea20ddaa",
+        "name": "personal",
+        "surName": "personal",
+        "documents": "36.165.173"
+      },
+      "workDate": "2024-10-16T03:00:00.000Z",
+      "startTime": "2024-10-16T20:13:56.437Z",
+      "endTime": "2024-10-16T20:13:58.783Z",
+      "totalHours": "0 hrs 0 min",
+      "description": null,
+      "status": "finalizado"
+    },
+    {
+      "id": "67101e8a6a23489c2f136b94",
+      "userId": "670c624259229521ea20ddaa",
+      "profile": {
+        "id": "670c624259229521ea20ddaa",
+        "name": "personal",
+        "surName": "personal",
+        "documents": "36.165.173"
+      },
+      "workDate": "2024-10-16T03:00:00.000Z",
+      "startTime": "2024-10-16T20:14:02.517Z",
+      "endTime": "2024-10-16T20:14:16.138Z",
+      "totalHours": "0 hrs 0 min",
+      "description": [
+        {
+          "date": "2024-10-16T20:14:12.326Z",
+          "details": "inicio recien "
+        }
+      ],
+      "status": "finalizado"
+    },
+    {
+      "id": "67101ecb6a23489c2f136b98",
+      "userId": "670c62c18751f72f4c616dde",
+      "profile": {
+        "id": "670c62c18751f72f4c616dde",
+        "name": "fateo",
+        "surName": "personal",
+        "documents": "36.165.177"
+      },
+      "workDate": "2024-10-16T03:00:00.000Z",
+      "startTime": "2024-10-16T20:15:07.865Z",
+      "endTime": "2024-10-16T21:45:05.228Z",
+      "totalHours": "1 hrs 29 min",
+      "description": [
+        {
+          "date": "2024-10-16T20:15:58.203Z",
+          "details": "registrado"
+        }
+      ],
+      "status": "finalizado"
+    },
+    {
+      "id": "671033a42565708a2862cad6",
+      "userId": "670c63ff028e631e11534a01",
+      "profile": {
+        "id": "670c63ff028e631e11534a01",
+        "name": "milo",
+        "surName": "ramirez",
+        "documents": "20.321.852"
+      },
+      "workDate": "2024-10-16T03:00:00.000Z",
+      "startTime": "2024-10-16T21:44:04.606Z",
+      "endTime": "2024-10-16T21:47:13.995Z",
+      "totalHours": "0 hrs 3 min",
+      "description": [
+        {
+          "date": "2024-10-16T21:44:42.067Z",
+          "details": "SE ROMPIO TABLET DE MILO"
+        }
+      ],
+      "status": "finalizado"
+    },
+    {
+      "id": "67110dc4021c551be2f2614e",
+      "userId": "670c62c18751f72f4c616dde",
+      "profile": {
+        "id": "670c62c18751f72f4c616dde",
+        "name": "fateo",
+        "surName": "personal",
+        "documents": "36.165.177"
+      },
+      "workDate": "2024-10-17T03:00:00.000Z",
+      "startTime": "2024-10-17T13:14:44.325Z",
+      "endTime": "2024-10-17T13:16:51.734Z",
+      "totalHours": "0 hrs 2 min",
+      "description": [
+        {
+          "date": "2024-10-17T13:14:54.998Z",
+          "details": "Iniciar jornada de trabajo"
+        },
+        {
+          "date": "2024-10-17T13:16:47.290Z",
+          "details": " sx={{\n              borderRadius: \"8px\",\n              minHeight: \"80px\",\n              display: \"flex\",\n              boxShadow: theme.palette.background.color.boxShadow,\n              alignItems: \"center\",\n              border:\n                snackbarSeverity === \"success\"\n                  ? `2px solid ${theme.palette.background.alertPopup?.Success}`\n                  : `2px solid ${theme.palette.background.alertPopup?.Error}`,\n              color: theme.palette.background.alertPopup?.color,\n            }}"
+        }
+      ],
+      "status": "finalizado"
+    },
+    {
+      "id": "67110ebf021c551be2f26155",
+      "userId": "670c63ff028e631e11534a01",
+      "profile": {
+        "id": "670c63ff028e631e11534a01",
+        "name": "milo",
+        "surName": "ramirez",
+        "documents": "20.321.852"
+      },
+      "workDate": "2024-10-17T03:00:00.000Z",
+      "startTime": "2024-10-17T13:18:55.062Z",
+      "status": "activo"
+    },
+    {
+      "id": "67110ec7021c551be2f26157",
+      "userId": "670c62c18751f72f4c616dde",
+      "profile": {
+        "id": "670c62c18751f72f4c616dde",
+        "name": "fateo",
+        "surName": "personal",
+        "documents": "36.165.172"
+      },
+      "workDate": "2024-10-17T03:00:00.000Z",
+      "startTime": "2024-10-17T13:19:03.727Z",
+      "status": "activo"
+    },
+    {
+      "id": "67110ed3021c551be2f26159",
+      "userId": "670fab50e14b418dcfdacf53",
+      "profile": {
+        "id": "670fab50e14b418dcfdacf53",
+        "name": "publicos",
+        "surName": "publicos",
+        "documents": "36.165.200"
+      },
+      "workDate": "2024-10-17T03:00:00.000Z",
+      "startTime": "2024-10-17T13:19:15.672Z",
+      "status": "activo"
+    },
+    {
+      "id": "67110ee1021c551be2f2615b",
+      "userId": "670c674c4af53dbddaf72fb1",
+      "profile": {
+        "id": "670c674c4af53dbddaf72fb1",
+        "name": "mario",
+        "surName": "mario",
+        "documents": "98.765.432"
+      },
+      "workDate": "2024-10-17T03:00:00.000Z",
+      "startTime": "2024-10-17T13:19:28.966Z",
+      "status": "activo"
+    }
+  ]
+}
