@@ -1,7 +1,7 @@
 import {BootMixin} from '@loopback/boot';
 import {ApplicationConfig} from '@loopback/core';
 import {RepositoryMixin} from '@loopback/repository';
-import {RestApplication} from '@loopback/rest';
+import {RestApplication, RestBindings} from '@loopback/rest';
 import {
   RestExplorerBindings,
   RestExplorerComponent,
@@ -13,7 +13,6 @@ import {AuthMiddleware} from './Middleware/auth.middleware';
 import {MySequence} from './sequence';
 import {GlobalLogService} from './services/global-log.service';
 export {ApplicationConfig};
-
 export class MyBackendStockApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
@@ -30,10 +29,11 @@ export class MyBackendStockApplication extends BootMixin(
     this.component(RestExplorerComponent);
 
     this.service(GlobalLogService);
-
     this.dataSource(MongodbDataSource);
-
     this.middleware(AuthMiddleware);
+
+    this.bind(RestBindings.PORT).to(parseInt(process.env.PORT ?? '3000', 10));
+    this.bind(RestBindings.HOST).to(process.env.HOST ?? '0.0.0.0');
 
     this.projectRoot = __dirname;
     this.bootOptions = {
