@@ -1,75 +1,123 @@
-# my-backend-stock
+# My-stock-back-end 🛠️
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
+## Instalación
 
-## Install dependencies
+### Prerrequisitos
+Antes de comenzar, asegúrate de tener instalados los siguientes componentes en tu sistema:
 
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
+- **Node.js** (versión 14 o superior)
+- **npm** (viene incluido con Node.js)
+- **Git**
 
-```sh
+### Clonar el Repositorio
+Si aún no lo has hecho, clona el repositorio vacío desde GitHub:
+
+git clone https://github.com/tu-usuario/my-stock-back-end.git
+
+### Navegar al Directorio del Proyecto
+cd my-stock-back-end
+
+
+### Instalar las Dependencias
 npm install
-```
 
-To only install resolved dependencies in `package-lock.json`:
+## ⚙️ Configuración
 
-```sh
-npm ci
-```
+Crea un archivo `.env` en la raíz del proyecto con las variables necesarias. A continuación se muestra un ejemplo de las variables que podrías necesitar:
 
-## Run the application
+Puerto en el que correrá la aplicación
+PORT=3000
 
-```sh
-npm start
-```
+Configuración de la base de datos
+DB_HOST=localhost DB_PORT=3306 DB_USER=tu_usuario DB_PASS=tu_contraseña DB_NAME=my_stock_db
 
-You can also run `node .` to skip the build step.
+URL del front-end
+FRONTEND_URL=http://localhost:4200
 
-Open http://127.0.0.1:3000 in your browser.
+**Nota**: Asegúrate de reemplazar los valores de ejemplo con los correspondientes a tu entorno.
 
-## Rebuild the project
+## 📜 Scripts Disponibles
 
-To incrementally build the project:
+- `npm run start`: Inicia la aplicación en modo producción.
+- `npm run dev`: Inicia la aplicación en modo desarrollo con recarga en caliente.
+- `npm run build`: Compila el código TypeScript a JavaScript.
+- `npm run lint`: Analiza el código en busca de errores y problemas de estilo.
+- `npm run test`: Ejecuta las pruebas unitarias.
+- `npm run migrate`: Ejecuta las migraciones de la base de datos.
 
-```sh
-npm run build
-```
+## 🚀 Ejecución en Modo Desarrollo
 
-To force a full build by cleaning up cached artifacts:
+Para iniciar la aplicación en modo desarrollo, utiliza el siguiente comando:
 
-```sh
-npm run rebuild
-```
+npm run dev
 
-## Fix code style and formatting issues
+Esto iniciará el servidor con recarga en caliente, permitiendo ver los cambios en tiempo real sin reiniciar manualmente.
 
-```sh
-npm run lint
-```
+## 🗃️ Estructura del Proyecto
 
-To automatically fix such issues:
+my-stock-back-end/ ├── src/ │ ├── controllers/ │ ├── models/ │ ├── repositories/ │ ├── datasources/ │ ├── middlewares/ │ ├── services/ │ ├── index.ts │ └── application.ts ├── tests/ ├── .env ├── .gitignore ├── package.json ├── tsconfig.json └── README.md
 
-```sh
-npm run lint:fix
-```
+- **controllers/**: Contiene los controladores que manejan las solicitudes HTTP.
+- **models/**: Define los modelos de datos de la aplicación.
+- **repositories/**: Maneja la interacción con la base de datos.
+- **datasources/**: Configuración de las fuentes de datos.
+- **middlewares/**: Middleware personalizados para la aplicación.
+- **services/**: Servicios que encapsulan la lógica de negocio.
+- **index.ts**: Punto de entrada de la aplicación.
+- **application.ts**: Configuración principal de la aplicación LoopBack.
 
-## Other useful commands
+## 🧪 Pruebas
 
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
+Para ejecutar las pruebas unitarias, utiliza el siguiente comando:
 
-## Tests
+npm run test
 
-```sh
-npm test
-```
+**Tip**: Asegúrate de tener configurada una base de datos de pruebas o utiliza mocks para las pruebas.
 
-## What's next
+## 🌐 API Endpoints Disponibles
 
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
+A continuación, se detallan los endpoints disponibles en la API:
 
-[![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
+- `GET /api/stocks`: Obtiene la lista de acciones.
+- `POST /api/stocks`: Crea una nueva acción.
+- `GET /api/stocks/{id}`: Obtiene detalles de una acción específica.
+- `PUT /api/stocks/{id}`: Actualiza una acción existente.
+- `DELETE /api/stocks/{id}`: Elimina una acción.
+
+### Documentación de la API
+
+Puedes acceder a la documentación interactiva de la API generada por LoopBack4 en:
+
+http://localhost:3000/explorer
+
+**Nota**: Asegúrate de que la aplicación esté corriendo para acceder al explorador de API.
+
+## 🤝 Contribución
+
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos para contribuir:
+
+1. Haz un Fork del Repositorio.
+2. Crea una Rama para tu Feature:
+
+git checkout -b feature/nueva-feature
+
+3. Realiza tus Cambios y Haz Commit:
+
+git commit -m "Añadir nueva feature"
+
+markdown
+Copiar código
+
+4. Empuja la Rama al Repositorio Remoto:
+
+git push origin feature/nueva-feature
+
+5. Abre un Pull Request en GitHub.
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+## 📞 Contacto
+
+Para cualquier duda o comentario, puedes contactarme a través de [ricardo.23.09.2022@gmail.com](mailto:ricardo.23.09.2022@gmail.com).
