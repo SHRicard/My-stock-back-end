@@ -34,7 +34,7 @@ export class AdminAuthController {
         role: user.role,
         name: user.name,
       },
-      process.env.JWT_SECRET || 'mysecret',
+      process.env.JWT_SECRET ?? 'mysecret',
       {expiresIn: '1h'},
     );
 
