@@ -40,7 +40,7 @@ export class MyBackendStockApplication extends BootMixin(
 
     // Configuración del puerto y host desde variables de entorno
     this.bind(RestBindings.PORT).to(parseInt(process.env.PORT ?? '3000', 10));
-    this.bind(RestBindings.HOST).to(process.env.HOST);
+    this.bind(RestBindings.HOST).to(process.env.HOST ?? '0.0.0.0');
 
     // Configuración de CORS
     this.bind('middleware.CORS').to(
