@@ -14,10 +14,10 @@ export async function main(options: ApplicationConfig = {}) {
 
   return app;
 }
-const PORT = process.env.PORT;
-const HOST = process.env.HOST;
-const ORIGIN = process.env.ORIGIN;
-const METHODS = process.env.METHODS;
+const PORT = parseInt(process.env.PORT ?? '3000', 10);
+const HOST = process.env.HOST ?? process.env.DEFAULT_HOST;
+const ORIGIN = process.env.ORIGIN ?? '*';
+const METHODS = process.env.METHODS ?? 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
 if (require.main === module) {
   const config = {
@@ -26,7 +26,7 @@ if (require.main === module) {
       host: HOST,
       gracePeriodForClose: 5000,
       openApiSpec: {
-        setServersFromRequest: true,
+        setServersFromRequest: false,
       },
       cors: {
         origin: ORIGIN,
