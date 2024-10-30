@@ -4,16 +4,21 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-// Selecciona el nombre de la base de datos según el entorno
-const dbName =
-  process.env.NODE_ENV === 'production'
+const isProduction = (origin: string) => origin === process.env.PRODUCCION_URL;
+
+// Función para construir la URL de la base de datos según el origen
+const dataBase = (origin: string): string => {
+  const dbName = isProduction(origin)
     ? process.env.DB_NAME_PROD
     : process.env.DB_NAME_DEMO;
+
+  return `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${dbName}?${process.env.DB_OPTIONS}`;
+};
 
 const config = {
   name: process.env.NAME ?? 'mongodb',
   connector: process.env.CONNECTOR ?? 'mongodb',
-  url: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${dbName}?${process.env.DB_OPTIONS}`,
+  url: dataBase(process.env.ORIGIN ?? ''),
   useNewUrlParser: true,
 };
 
