@@ -4,16 +4,10 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-// Selecciona el nombre de la base de datos según el entorno
-const dbName =
-  process.env.NODE_ENV === 'production'
-    ? process.env.DB_NAME_PROD
-    : process.env.DB_NAME_DEMO;
-
 const config = {
   name: process.env.NAME ?? 'mongodb',
   connector: process.env.CONNECTOR ?? 'mongodb',
-  url: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${dbName}?${process.env.DB_OPTIONS}`,
+  url: '', // La URL será proporcionada por el DatabaseUrlProvider
   useNewUrlParser: true,
 };
 
@@ -28,7 +22,10 @@ export class MongodbDataSource
   constructor(
     @inject('datasources.config.mongodb', {optional: true})
     dsConfig: object = config,
+
+    // Inyecta la URL proporcionada por DatabaseUrlProvider
+    @inject('datasources.config.mongodb.url') databaseUrl: string,
   ) {
-    super(dsConfig);
+    super({...dsConfig, url: databaseUrl}); // Usa la URL proporcionada por el Provider
   }
 }

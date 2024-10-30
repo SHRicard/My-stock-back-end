@@ -12,6 +12,7 @@ import * as dotenv from 'dotenv';
 import path from 'path';
 import {MongodbDataSource} from './datasources';
 import {AuthMiddleware} from './Middleware/auth.middleware';
+import {DatabaseUrlProvider} from './providers/database-url.provider';
 import {MySequence} from './sequence';
 import {GlobalLogService} from './services/global-log.service';
 
@@ -42,6 +43,9 @@ export class MyBackendStockApplication extends BootMixin(
     this.bind(RestBindings.PORT).to(parseInt(process.env.PORT ?? '3000', 10));
     this.bind(RestBindings.HOST).to(process.env.HOST ?? '0.0.0.0');
 
+    // Usa el middleware de selección de base de datos
+    this.bind('datasources.config.mongodb.url').toProvider(DatabaseUrlProvider);
+
     // Configuración de CORS
     this.bind('middleware.CORS').to(
       cors({
@@ -51,7 +55,7 @@ export class MyBackendStockApplication extends BootMixin(
         credentials: true,
       }),
     );
-
+    this.sequence(MySequence);
     this.projectRoot = __dirname;
     this.bootOptions = {
       controllers: {
