@@ -1,75 +1,59 @@
-# my-backend-stock
+# My-stock Back-End
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
+## 📋 Descripción
 
-## Install dependencies
+**My-stock** es una aplicación de gestión de inventario desarrollada con **Vite**, **React**, y **TypeScript**, diseñada para ofrecer una interfaz rápida y fácil de usar para administrar productos y usuarios.
 
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
+## 🚀 Tecnologías Utilizadas
 
-```sh
-npm install
-```
+- **Frontend**: Vite, React, TypeScript
+- **Backend**: LoopBack 4 (repositorio aparte)
+- **Base de Datos**: MongoDB
 
-To only install resolved dependencies in `package-lock.json`:
+## 🌟 Funcionalidades
 
-```sh
-npm ci
-```
+- **Modos de visualización**: Dark Mode y Light Mode
+- **Gestión de productos**: 
+  - Búsqueda avanzada por nombre exacto
+  - Filtros por fecha de creación y usuario
+  - Creación, actualización, eliminación y control de stock
+- **Gestión de usuarios**: 
+  - Creación y eliminación de usuarios
+  - Control de horas trabajadas/conectadas
+  - Creación de notas diarias para cada usuario
+- **Autenticación y Sesiones**:
+  - Inicio de sesión seguro con autenticación
+  - Recordatorio de sesión con vencimiento automático cada hora
+- **Otras características**: Reportes de actividad, control de acceso, y filtrado avanzado.
 
-## Run the application
+## 🛠️ Instalación y Ejecución
 
-```sh
-npm start
-```
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/SHRicard/My-stock-front-end.git
+## ⚙️ Configuración
 
-You can also run `node .` to skip the build step.
+Crea un archivo `.env` en la raíz del proyecto con las variables necesarias, como la URL del backend.
 
-Open http://127.0.0.1:3000 in your browser.
+## 📜 Scripts Disponibles
 
-## Rebuild the project
+- `npm run dev`: Inicia el entorno de desarrollo.
+- `npm run build`: Compila la app para producción.
+- `npm run lint`: Analiza el código en busca de errores.
 
-To incrementally build the project:
+## 🤝 Contribución
 
-```sh
-npm run build
-```
+Las contribuciones son bienvenidas. Haz un fork y crea una rama para tus cambios.
 
-To force a full build by cleaning up cached artifacts:
+## 📄 Licencia
 
-```sh
-npm run rebuild
-```
+Este proyecto está bajo la Licencia MIT.
 
-## Fix code style and formatting issues
 
-```sh
-npm run lint
-```
+## ¡Se Agradece Mucho Una Estrellita! 🌟
 
-To automatically fix such issues:
+Si este proyecto te ha sido útil o te ha gustado, no dudes en darle una estrella ⭐️ en GitHub. ¡Tu apoyo nos motiva a seguir mejorando! 😊
 
-```sh
-npm run lint:fix
-```
+[¡Dale una estrella aquí!](https://github.com/SHRicard/My-stock-back-end)
 
-## Other useful commands
-
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
-
-## Tests
-
-```sh
-npm test
-```
-
-## What's next
-
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
-
-[![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
+¡Gracias por contribuir al open-source! 🎉
